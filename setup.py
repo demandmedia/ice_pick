@@ -12,6 +12,10 @@ packages = [
     'ice_pick.filters',
 ]
 
+test_requires = []
+with open('requirements_test.txt') as f:
+    test_requires = f.read().split('\n')
+
 requires = []
 with open('requirements.txt') as f:
     requires = f.read().split('\n')
@@ -26,6 +30,8 @@ setup(name=ice_pick.__title__,
       packages=packages,
       package_dir={'ice_pick': 'ice_pick'},
       install_requires=requires,
+      tests_require=test_requires,
+      setup_requires=['nose==1.3.0'],
       classifiers=('Development Status :: 5 - Production/Stable',
                    'Intended Audience :: Developers',
                    'Natural Language :: English',
