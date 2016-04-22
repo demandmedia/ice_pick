@@ -20,6 +20,7 @@ Copyright 2014 Demand Media.
 """
 
 
+NONE = 'None'
 ACCOUNT = 'Account'
 OPERATION = 'Operation'
 PRODUCT = 'Product'
